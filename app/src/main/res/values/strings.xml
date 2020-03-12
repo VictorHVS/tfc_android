@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TradeFight.club</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_anonimous">Anônimo</string>
+    <string name="login_google">Google</string>
+    <string name="login_login_with">Entrar como:</string>
+    <string name="title_auth">Auth</string>
 </resources>

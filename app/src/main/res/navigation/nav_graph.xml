@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/auth_nav_graph">
+
+    <include-dynamic
+        android:id="@+id/auth_nav_graph"
+        app:moduleName="auth"
+        app:graphResName="auth_graph"
+        app:graphPackage="com.victorhvs.tradefightclub.auth">
+    </include-dynamic>
+</navigation>
