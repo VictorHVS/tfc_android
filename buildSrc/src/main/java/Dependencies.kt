@@ -1,32 +1,137 @@
 import org.gradle.api.JavaVersion
 
-object Config {
-    val minSdk = 23
-    val compileSdk = 29
-    val targetSdk = 29
-    val javaVersion = JavaVersion.VERSION_1_8
-    val buildTools = "28.0.3"
+object ApplicationId {
+    val id = "com.victorhvs.tradefightclub"
+}
+
+object Modules {
+    val app = ":app"
+    val core = ":core"
+
+    val ui = ":commons:ui"
+    val views = ":commons:views"
+
+    val auth = ":features:auth"
+    val main = ":features:main"
+    val home = ":features:home"
+    val profile = ":features:profile"
+    val history = ":features:history"
+    val rank = ":features:rank"
+    val trading = ":features:trading"
+}
+
+object Releases {
+    val versionCode = 1
+    val versionName = "1.0"
 }
 
 object Versions {
-    val androidx_core = "1.0.1"
-    val androidx_recyclerview = "1.0.0"
-    val androidx_navigation = "2.0.0"
-    val androidx_constraintLayout = "1.1.3"
-    val material = "1.1.0-alpha04"
+    val gradle = "3.5.3"
+
+    val compileSdk = 29
+    val minSdk = 24
+    val targetSdk = 29
+
+    val googleAuth = "16.0.1"
+
+    val googleServices = "4.3.3"
+
+    val firebaseAuth = "16.0.4"
+    val firebaseCore = "17.2.1"
+
+    val fabric = "1.31.2"
+
+    val appcompat = "1.2.0-alpha01"
+    val design = "1.2.0-alpha03"
+    val cardview = "1.0.0"
+    val recyclerview = "1.2.0-alpha01"
+    val swiperefreshlayout = "1.1.0-alpha03"
+    val maps = "15.0.1"
+
+    val ktx = "1.0.0-alpha1"
+
+    val kotlin = "1.3.61"
+    val timber = "4.7.1"
+    val rxjava = "2.2.16"
+    val rxkotlin = "2.4.0"
+    val retrofit = "2.7.0"
+    val loggingInterceptor = "4.2.2"
+    val glide = "4.10.0"
+    val rxpaper = "1.4.0"
+    val paperdb = "2.6"
+    val moshi = "1.8.0"
+    val lifecycle = "2.1.0"
+    val leakCanary = "2.0"
+    val crashlytics = "2.10.1"
+    val koin = "2.0.0-beta-1"
+
+    val playCore = "1.6.4"
 
     val junit = "4.12"
-    val androidx_espresso = "3.1.0"
-    val androidx_testing = "1.1.1"
-
-    val gradleandroid = "3.5.0"
-    val kotlin = "1.3.20"
-    val gradleversions = "0.21.0"
+    val assertjCore = "3.14.0"
+    val mockitoKotlin = "2.1.0"
+    val mockitoInline = "3.2.4"
 }
 
-object Deps {
-    val androidx_core = "androidx.core:core-ktx:${Versions.androidx_core}"
+object Libraries {
+    val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
 
+    val ktx = "androidx.core:core-ktx:${Versions.ktx}"
 
+    val maps = "com.google.android.gms:play-services-maps:${Versions.maps}"
+
+    val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+
+    val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjava}"
+    val rxkotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxkotlin}"
+
+    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    val rxjavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
+    val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    val loggingInterceptor =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+
+    val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+
+    val paperdb = "io.paperdb:paperdb:${Versions.paperdb}"
+    val rxpaper = "com.github.pakoito:RxPaper2:${Versions.rxpaper}"
+    val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
+
+    val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
+
+    val leakCanaryAndroid = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
+
+    val crashlytics = "com.crashlytics.sdk.android:crashlytics:${Versions.crashlytics}"
+
+    val koinAndroid = "org.koin:koin-android:${Versions.koin}"
+    val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 }
 
+object SupportLibraries {
+    val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
+    val design = "com.google.android.material:material:${Versions.design}"
+    val cardview = "androidx.cardview:cardview:${Versions.cardview}"
+    val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
+    val swiperefreshlayout =
+        "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swiperefreshlayout}"
+}
+
+object GoogleLibraries {
+    val auth = "com.google.android.gms:play-services-auth:${Versions.googleAuth}"
+    val playCore = "com.google.android.play:core:${Versions.playCore}"
+}
+
+object FirebaseLibraries {
+    val auth = "com.google.firebase:firebase-auth:${Versions.firebaseAuth}"
+    val core = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
+}
+
+object TestLibraries {
+    val junit = "junit:junit:${Versions.junit}"
+    val assertjCore = "org.assertj:assertj-core:${Versions.assertjCore}"
+    val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
+    val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
+    val lifecycleTesting = "androidx.arch.core:core-testing:${Versions.lifecycle}"
+}

@@ -1,2 +1,12 @@
-include ':app', ':auth'
-rootProject.name='TradeFight.club'
+include Modules.app,
+        Modules.core,
+        Modules.auth,
+        Modules.main,
+        Modules.home,
+        Modules.rank,
+        Modules.profile,
+        Modules.history,
+        Modules.trading,
+        Modules.views
+
+rootProject.name = 'TradeFight.club'

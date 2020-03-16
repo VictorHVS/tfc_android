@@ -7,4 +7,10 @@
     <string name="login_google">Google</string>
     <string name="login_login_with">Entrar como:</string>
     <string name="title_auth">Auth</string>
+    <string name="title_main">Main</string>
+    <string name="title_home">Home</string>
+    <string name="title_rank">Rank</string>
+    <string name="title_history">History</string>
+    <string name="title_trading">Trading</string>
+    <string name="title_profile">Profile</string>
 </resources>

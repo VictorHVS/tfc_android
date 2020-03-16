@@ -27,7 +27,14 @@ android {
     }
 
 
-    dynamicFeatures = [":auth"]
+    dynamicFeatures = [Modules.auth,
+                       Modules.main,
+                       Modules.home,
+                       Modules.profile,
+                       Modules.history,
+                       Modules.rank,
+                       Modules.trading]
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
